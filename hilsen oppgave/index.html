@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hilsen-side</title>
+    <style>
+        #vinkendeGif {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Hilsen-side</h1>
+
+<input type="text" id="navnInput" placeholder="Skriv inn navnet ditt">
+<button onclick="siHei()">Yo</button>
+
+<p id="hilsenMelding"></p>
+<img id="vinkendeGif" src="vinkende.gif" alt="Vinkende GIF">
+
+<script>
+    function siHei() {
+        var navn = document.getElementById("navnInput").value;
+        var hilsenMeldingElement = document.getElementById("hilsenMelding");
+        var vinkendeGif = document.getElementById("vinkendeGif");
+
+        if (navn) {
+            hilsenMeldingElement.textContent = "Hei, " + navn;
+            vinkendeGif.style.display = "block";
+        } else {
+            hilsenMeldingElement.textContent = "Vennligst skriv inn navnet ditt.";
+            vinkendeGif.style.display = "none";
+        }
+    }
+</script>
+
+</body>
+</html>
